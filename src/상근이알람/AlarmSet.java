@@ -14,9 +14,8 @@ public class AlarmSet {
         // 창영이가 알려준 방법대로 시간을 45분 이전으로 돌림 (45를 빼줌)
         // 계산 결과를 시간과 분으로 출력하기 위해 다시 변환 후 출력
         Scanner sc = new Scanner(System.in);
-        System.out.println("시간을 입력하세요");
+        System.out.println("시간과 분을 입력하세요 \n");
         int hour = sc.nextInt();
-        System.out.println("분을 입력하세요");
         int minute = sc.nextInt();
         int time = (hour * 60) + minute;
         if (time < 45){

@@ -13,6 +13,9 @@ public class ForEx1 {
             sum += number;
             number--;
         }
-        System.out.println("정수의 합은 : " + sum);
+//        public static int recursiveFunc(int n){
+//            if (n == 1) return 1;
+//            return n + recursiveFunc(n-1);
+//        }
     }
 }

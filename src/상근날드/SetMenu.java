@@ -13,23 +13,20 @@ public class SetMenu {
         System.out.print("메뉴의 가격을 설정하세요 : ");
         int Menu[] = new int[5];
         Scanner sc = new Scanner(System.in);
-        int bugger = 10000000;
-        int drink = 10000000;
-        for (int i = 0; i < Menu.length; i++) {
+        for (int i = 0; i < 5; i++) {
             int a = sc.nextInt();
-            a = Menu[i];
-            for (int j = 0; j < 3; j++) {
-                if (Menu[j] < bugger) {
-                    bugger = Menu[j];
-                }
-            }
-            for (int x = 3; x < 5; x++) {
-                if (Menu[x] < drink) ;
-                {
-                    drink = Menu[x];
-                }
-            }
+            Menu[i] = a;
         }
-        System.out.print("고르신 메뉴의 가격은" + ((int)bugger + (int)drink - 50) + "원 입니다.");
+        int bugger = Menu[0];
+        int drink = Menu[3];
+        for (int j = 0; j < 3; j++) {
+            if (Menu[j] <= bugger)
+                bugger = Menu[j];
+        }
+        for (int x = 3; x < 5; x++) {
+            if (Menu[x] <= drink)
+                drink = Menu[x];
+        }
+        System.out.print("고르신 메뉴의 가격은 " + ((bugger + drink) - 50) + " 원 입니다.");
     }
 }

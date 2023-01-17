@@ -18,7 +18,7 @@ public class Bank {
     //예금을 위한 메소드 작성
     public void setDeposit(final int dep) {
         this.account += dep;
-        System.out.println(dep + "을 예금 했습니다.");
+        System.out.println(dep + "원을 예금 했습니다.");
     }
     public void setWithdraw(int with) {
         if(with > account) {
@@ -28,6 +28,6 @@ public class Bank {
         }
     }
     public  void viewAccount() {
-        System.out.println(bank + " 현재 잔액은 " + account + " 입니다.");
+        System.out.println(bank + " 현재 잔액은 " + account + "원 입니다.");
     }
 }

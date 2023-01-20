@@ -7,7 +7,7 @@ public class RemoteMain {
         System.out.print("제품 선택 [1]TV, [2]Audio : ");
         int selectMenu = sc.nextInt();
         RemoteControl remoCon;
-        if(selectMenu == 1) {
+        if (selectMenu == 1) {
             remoCon = new Television();
             remoCon.turnON();
             remoCon.setVolume(20);
@@ -20,6 +20,23 @@ public class RemoteMain {
             remoCon.setVolume(30);
             remoCon.setMute(true);
         }
+        RemoteControl remotecontorl = new RemoteControl() {
+            int volume;
 
+            @Override
+            public void turnON() {
+                System.out.println("플스5킵니다.");
+            }
+
+            @Override
+            public void turnOFF() {
+
+            }
+
+            @Override
+            public void setVolume(int volume) {
+
+            }
+        };
     }
 }

@@ -61,18 +61,21 @@ public class VehicleMain {
         //설정 별 결과값
         switch (transportation){
             case 1 :
+                System.out.println("차량 이름은 : "+ sportsCar.getName());
                 int cnt = (passengerNum/sportsCar.getSeat())+1;
                 System.out.println("총 비용은 " + ((mileagePrice * distance) / sportsCar.getMileage())* cnt  + "원");
                 System.out.printf("주유 횟수는 %d\n", distance / (sportsCar.getOilTank()* sportsCar.getMileage())+1);
                 System.out.printf("총 소요 시간은 %.2f\n",(double)distance/sportsCar.getSpeed());
                 break;
             case 2 :
+                System.out.println("차량 이름은 : "+ sedan.getName());
                 cnt = (passengerNum/sedan.getSeat())+1;
                 System.out.println(((mileagePrice * distance) / sedan.getMileage())*cnt + "원");
                 System.out.printf("%d\n", (distance / (sedan.getOilTank()* sedan.getMileage())+1)*cnt);
                 System.out.printf("총 소요 시간은 %.2f\n",(double)(distance/sedan.getSpeed())*cnt);
                 break;
             case 3 :
+                System.out.println("차량 이름은 : "+ bus.getName());
                 cnt = (passengerNum/bus.getSpeed())+1;
                 System.out.println(((mileagePrice * distance) / bus.getMileage())*cnt);
                 System.out.printf("%d\n", (distance / (bus.getOilTank()* bus.getMileage())+1)*cnt);

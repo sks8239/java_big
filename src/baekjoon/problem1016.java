@@ -13,7 +13,7 @@ public class problem1016 {
         long min = Long.valueOf(st.nextToken());
         long max = Long.valueOf(st.nextToken());
 
-        int result = (int) (max - min + 1);
+        int result = (int) (max - min + 1); //숫자범위
         int sqrt = ((int) Math.sqrt(max));
 
         // 제곱수인지 확인. false = 제곱수가 아님, true = 제곱수

@@ -16,6 +16,7 @@ public class ClassSortEx1 {
         Scanner sc = new Scanner(System.in);
         int StudentNum = sc.nextInt();
         int a = 1;
+        int preScore = 0;
         for (int i = 0; i < StudentNum; i++) {
             ts.add(new StudentSort(String.format("%7s",sc.next()), sc.nextInt(), sc.nextInt()));
         }
@@ -23,7 +24,15 @@ public class ClassSortEx1 {
         System.out.println("----------------------");
         System.out.println("석차   성적   이름   학번");
         for (StudentSort e : ts) {
-            System.out.printf("%d %6d %s %-7d\n", a++ ,e.grade,e.name,e.num);
+            if(preScore != e.grade) {
+                System.out.printf("%d %6d %s %-7d\n", a++, e.grade, e.name, e.num);
+                preScore = e.grade;
+            }else{
+                a -= 1;
+                System.out.printf("%d %6d %s %-7d\n", a, e.grade, e.name, e.num);
+                preScore = e.grade;
+                a +=2 ;
+            }
         }
     }
 }

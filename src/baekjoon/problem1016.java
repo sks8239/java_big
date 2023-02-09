@@ -18,7 +18,7 @@ public class problem1016 {
 
         // 제곱수인지 확인. false = 제곱수가 아님, true = 제곱수
         boolean[] checks = new boolean[result];
-        long[] num = new long[result];
+        long[   ] num = new long[result];
 
 
         for(long i = 2; i <= sqrt; i++) {

@@ -9,5 +9,7 @@ public class practiceEx1 {
         int hour = sc.nextInt();
         int minute = sc.nextInt();
         System.out.print(hour + "시" + minute + "분");
+
+
     }
 }

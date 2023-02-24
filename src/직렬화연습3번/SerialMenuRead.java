@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class SerialMenuRead {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        getMenuList();
+        getMenuList();  
     }
     static void getMenuList() throws IOException, ClassNotFoundException {
         FileInputStream fis = new FileInputStream("D:/직렬화파일/커피메뉴.bin");
@@ -26,5 +26,5 @@ public class SerialMenuRead {
         }
         fis.close();
         ois.close();
-    }   
+    }
 }
